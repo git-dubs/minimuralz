@@ -1,3 +1,92 @@
+/* FONTZ */
+
+@font-face {
+  font-family: 'PaintBalls';
+  src: url('fontz/PaintBalls.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'WONDER';
+  src: url('fontz/8-BIT\ WONDER.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'ALIENSAT';
+  src: url('fontz/ALIENSAT.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'FalturaAlien';
+  src: url('fontz/FalturaAlien.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FLOWER';
+  src: url('fontz/FLOWER.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'techniqo';
+  src: url('fontz/techniqo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FalturaAlien';
+  src: url('fontz/FalturaAlien.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JBLACK';
+  src: url('fontz/JBLACK.TTF') format('truetype');
+}
+
+/*
+@font-face {
+  font-family: 'VolcanicDungeon';
+  src: url('fontz/Volcanic\ Dungeon.ttf') format('truetype');
+}  
+*/
+
+@keyframes fontCycle {
+  0%   { font-family: 'PaintBalls', sans-serif; }
+  12%  { font-family: 'WONDER', monospace; }
+  25%  { font-family: 'CarnivoraFlora', serif; }
+  37%  { font-family: 'ALIENSAT', fantasy; }
+  50%  { font-family: 'FalturaAlien', cursive; }
+  62%  { font-family: 'FLOWER', monospace; }
+  75%  { font-family: 'JBLACK', sans-serif; }
+  87%  { font-family: 'Scratch', serif; }
+  100% { font-family: 'techniqo', sans-serif; }
+}
+
+/* ANIMATIONS*/
+
+.murals-title {
+  animation: fontCycle .5s infinite linear; /* or however many seconds */
+}
+
+
+/* Social Medias */
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.icon-img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.icon-img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px #FFA500;
+}
+
+
 /* === DUNGEON FRAMING === */
 body.dungeon-frame {
   background-color: #000;
@@ -20,7 +109,6 @@ body.dungeon-frame.noscroll {
   overflow: hidden;
 }
 
-
 /* === PAGE LAYOUT SECTION === */
 .themed-section {
   display: flex;
@@ -41,7 +129,6 @@ body.dungeon-frame.noscroll {
   height: 100vh;
   text-align: center;
 }
-
 
 .logo-title {
   font-size: 10vw;
@@ -134,6 +221,7 @@ body.dungeon-frame.noscroll {
   color: #FF4500; }  /* Torch default */
 
 
+
 /* === MURALS PAGE === */
 
 .cielito-link:link,
@@ -164,13 +252,25 @@ body.dungeon-frame.noscroll {
   text-align: center;
   box-sizing: border-box;
 }
+  
 
 .murals-title {
   font-size: 5vw;
   margin-bottom: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  color: white;
+  text-align: center;
+  animation: fontCycle 16s infinite;
+  line-height: 1;
+  height: 6rem;           /* adjust this value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
+
 
 .section-header {
   font-size: 2rem;
@@ -211,7 +311,6 @@ body.dungeon-frame.noscroll {
   border-top: 1px solid #A020F0;
 }
 
-
 .call-title {
   font-size: 2rem;
   color: #A020F0;
@@ -249,13 +348,6 @@ footer {
   0% { opacity: 0.3; }
   100% { opacity: 1; }
 }
-
-
-
-
-/* RETURN GATES !!! */
-
-
 
 
 /* === RETURN GATE FUNCTION === */
@@ -309,4 +401,15 @@ footer {
 .sieve-theme .return-gate {
   color: gold;
   border: 2px solid gold;
+}
+
+
+@media (max-width: 600px) {
+  .return-gate {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+  }
 }
